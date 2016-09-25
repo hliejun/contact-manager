@@ -1,3 +1,9 @@
+// External Dependencies
+// import * as Backbone from "backbone";
+// import * as Bootstrap from "bootstrap";
+// import * as JQuery from "jquery";
+// import * as Underscore from "underscore";
+
 ContactManager.Views.Contacts = Backbone.View.extend({
     template: _.template($('#tpl-contacts').html()),
 

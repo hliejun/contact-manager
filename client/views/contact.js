@@ -1,3 +1,9 @@
+// External Dependencies
+// import * as Backbone from "backbone";
+// import * as Bootstrap from "bootstrap";
+// import * as JQuery from "jquery";
+// import * as Underscore from "underscore";
+
 ContactManager.Views.Contact = Backbone.View.extend({
     tagName: 'li',
     className: 'media col-md-6 col-lg-4',

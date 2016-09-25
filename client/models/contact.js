@@ -1,3 +1,9 @@
+// External Dependencies
+// import * as Backbone from "backbone";
+// import * as Bootstrap from "bootstrap";
+// import * as JQuery from "jquery";
+// import * as Underscore from "underscore";
+
 ContactManager.Models.Contact = Backbone.Model.extend({
     defaults: {
         name: null,

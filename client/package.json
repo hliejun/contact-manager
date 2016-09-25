@@ -1,0 +1,40 @@
+{
+    "name": "contact-manager",
+    "version": "1.0.0",
+    "description": "a simple React web application that manages your contacts ",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hliejun/contact-manager.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hliejun/contact-manager/issues"
+    },
+    "homepage": "https://github.com/hliejun/contact-manager#readme",
+    "dependencies": {
+        "babel-cli": "^6.14.0",
+        "babel-core": "^6.14.0",
+        "babel-loader": "^6.2.5",
+        "babel-preset-react": "^6.11.1",
+        "backbone": "^1.3.3",
+        "bootstrap": "^3.3.7",
+        "css-loader": "^0.25.0",
+        "ejs-loader": "^0.3.0",
+        "file-loader": "^0.9.0",
+        "html-loader": "^0.4.4",
+        "image-webpack-loader": "^2.0.0",
+        "jquery": "^3.1.1",
+        "json-loader": "^0.5.4",
+        "react": "^15.3.2",
+        "react-dom": "^15.3.2",
+        "style-loader": "^0.13.1",
+        "underscore": "^1.8.3",
+        "url-loader": "^0.5.7",
+        "webpack": "^1.13.2"
+    }
+}
