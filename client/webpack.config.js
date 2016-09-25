@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
     entry: ["./app"],
     output: {
@@ -6,6 +8,8 @@ module.exports = {
     },
     module: {
         loaders: [
+            { test: path.join(__dirname, ''), loader: 'babel-loader' },
+            { test: /.jsx?$/, loader: 'babel-loader', exclude: /node_modules/, query: { presets: ['es2015', 'react']} },
             { test: /\.(woff|woff2|eot|ttf|gif|svg)$/, loader: 'url-loader?limit=100000' },
             { test: /\.jpg$/, loader: "file-loader" },
             { test: /\.png$/, loader: "url-loader?mimetype=image/png" },
