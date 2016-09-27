@@ -1,6 +1,32 @@
 import React, {Component} from 'react'
+import {Router} from 'react-router'
+import {Link} from 'react-router'
 
-export default class ContactThumbnail extends Component {
+class ContactThumbnail extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            id: props.contactDetails.id,
+            name: props.contactDetails.name,
+            tel: props.contactDetails.tel,
+            email: props.contactDetails.email,
+            avatarCode: props.avatarCode
+        };
+        this.onEdit = this.onEdit.bind(this);
+        this.onDelete = this.onDelete.bind(this);
+
+// COMPONENT DID MOUNT
+    }
+
+    onEdit() {
+        this.props.onEdit(this.props.contactDetails.id);
+    }
+
+    onDelete() {
+        // this.context.router.push('/index.html');
+        this.props.onDelete(this.props.contactDetails.id);
+    }
+
     render() {
         var avatar = "../resources/faces/" + this.props.avatarCode + ".jpg";
         var name = this.props.contactDetails.name;
@@ -17,14 +43,14 @@ export default class ContactThumbnail extends Component {
                         <h3>
                             {name}
                             <small>
+                                &nbsp;
+                                <Link to="/index.html/form" className="edit-contact">
+                                    <span onClick={this.onEdit} to="/index.html/form" className="glyphicon glyphicon-pencil"></span>
+                                </Link>
+                                &nbsp;
+                                <a className="delete-contact">
 
-                                <a href="#contacts/edit/id">
-                                    <span className="glyphicon glyphicon-pencil"></span>
-                                </a>
-
-                                <a href="#contacts/delete/id" className="delete-contract">
-
-                                    <span className="glyphicon glyphicon-trash"></span>
+                                    <span onClick={this.onDelete} className="glyphicon glyphicon-trash"></span>
 
                                 </a>
                             </small>
@@ -48,3 +74,9 @@ export default class ContactThumbnail extends Component {
         );
     }
 }
+
+ContactThumbnail.contextTypes = {
+    router: React.PropTypes.object
+};
+
+export default ContactThumbnail;

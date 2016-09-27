@@ -1,5 +1,5 @@
 // Import Modules
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 
 // Routing
@@ -25,4 +25,5 @@ require("bootstrap/dist/css/bootstrap.css");
 require("./styles/main.css");
 
 // Routings
-render(<Router routes={routes} history={browserHistory} />, document.getElementById('main'));
+render(
+    <Router routes={routes} history={browserHistory}/>, document.getElementById('main'));
